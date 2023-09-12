@@ -1,0 +1,79 @@
+body {
+    font-family: Verdana;
+    background-color: #7D7F85;
+}
+
+.container {
+    width: 800px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header {
+    height: 260px;
+    width: 100%;
+}
+
+aside {
+    background-color: #1A3B98;
+    height: 600px;
+    width: 20%;
+}
+
+main {
+    background-color: #C2C3C2;
+    text-align: center;
+    color: #886829;
+    height: 560px;
+    width: 80%;
+    padding-top: 40px;
+
+}
+
+footer {
+    background-color: #1A3B98;
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+a {
+    color: #AF0215;
+    text-decoration: none;
+}
+
+table {
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    color: black;
+}
+
+th {
+    background-color: #777777;
+}
+
+tr:nth-child(odd) {
+    background-color: #AAAAAA;
+}
+
+.wskaznikBMI {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.kategoriaBMI {
+    font-size: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    margin-top: 1em;
+}

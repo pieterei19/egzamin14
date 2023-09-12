@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Body Mass Index</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="baner.gif" alt="baner">
+        </header>
+        <aside>
+            <hr>
+            <a href="index.html">
+                <h2>BMI</h2>
+            </a>
+            <hr>
+            <a href="kalkulator.html">
+                <h2>Kalkulator</h2>
+            </a>
+            <hr>
+        </aside>
+        <main>
+            <form name="formularz" action="#">
+                <label for="waga">Waga</label>
+                <input name="waga" type="text">
+                <label for="wzrost">Wzrost</label>
+                <input name="wzrost">
+                <button onclick="liczenie()">Oblicz BMI</button>
+            </form>
+            <p id="bmi" class="wskaznikBMI">BMI</p>
+            <p id="kate" class="kategoriaBMI">Kategoria</p>
+        </main>
+        <footer>Autor strony: <i>12345678910</i></footer>
+        <script>
+            function liczenie() {
+                let bmis = document.forms.formularz.waga.value / Math.pow(document.forms.formularz.wzrost.value, 2);
+                if (bmis < 18, 5) {
+                    document.getElementById("bmi").innerHTML = bmis;
+                    document.getElementById("kate").innerHTML = "Masz niedowagę";
+                    document.getElementById("kate").style.color = "red";
+                } else if (bmis > 18, 5 && bmis < 24, 9) {
+                    document.getElementById("bmi").innerHTML = bmis;
+                    document.getElementById("kate").innerHTML = "Jesteś w normie";
+                    document.getElementById("kate").style.color = "green";
+                } else if (bmis > 25, 0 && bmis < 29, 9) {
+                    document.getElementById("bmi").innerHTML = bmis;
+                    document.getElementById("kate").innerHTML = "Masz nadwagę";
+                    document.getElementById("kate").style.color = "red";
+                } else if (bmis > 30, 0 && bmis < 34, 9) {
+                    document.getElementById("bmi").innerHTML = bmis;
+                    document.getElementById("kate").innerHTML = "Masz Otyłość 1st.";
+                    document.getElementById("kate").style.color = "red";
+                } else if (bmis > 35, 0 && bmis < 39, 9) {
+                    document.getElementById("bmi").innerHTML = bmis;
+                    document.getElementById("kate").innerHTML = "Masz Otyłość 2st.";
+                    document.getElementById("kate").style.color = "red";
+                } else {
+                    document.getElementById("bmi").innerHTML = bmis;
+                    document.getElementById("kate").innerHTML = "Masz Otyłość 3st.";
+                    document.getElementById("kate").style.color = "red";
+                };
+            };
+
+        </script>
+    </div>
+</body>
+
+</html>
